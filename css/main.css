@@ -1,0 +1,291 @@
+body{
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*--layout--*/
+	body{
+		display: grid;
+		grid-template-areas: 
+			"fejlec"
+			"kontent"
+			"lablec"
+		;
+		grid-template-rows: max-content 1fr max-content;
+		min-height: 100vh;
+	}
+
+	header{
+		grid-area: fejlec;
+	}
+
+	main{
+		grid-area: kontent;
+	}
+
+	footer{
+		grid-area: lablec;
+	}
+/*--layout_end--*/
+	
+/*--azonos_header--*/
+	header{
+		background-color: #bae8ff;
+		text-align: center;
+		padding: 15px;
+	}
+
+	header .header_menu:link{
+		font-size: 21px;
+		text-decoration: none;
+		color: black;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 15px;
+	}
+
+	header .header_menu:visited{
+		font-size: 21px;
+		text-decoration: none;
+		color: black;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 15px;
+	}
+
+	header .header_menu:hover{
+		background-color: #66ccff;
+		color: white;
+		
+		animation-name: menupont;
+		animation-duration: 1s;
+	}
+
+	@keyframes menupont{
+		from{background-color: white; color: #66ccff;}
+		to{background-color: #66ccff; color: white;}
+	}
+
+	.logo{
+		max-width: 35px;
+		vertical-align: middle;
+		float: left;
+	}
+
+
+/*--azonos_header_end--*/
+
+/*--azonos_main--*/
+	main{
+		background-color: #d9f2ff;
+		padding-bottom: 30px;
+		padding-top: 30px;
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	.szoveg{
+		text-align: justify;
+	}
+
+	.cim{
+		text-align: center;
+		padding-bottom: 30px;
+	}
+/*--azonos_main_end--*/
+
+/*--azonos_footer--*/
+	footer{
+		background-color: #bae8ff;
+		text-align: center;
+		padding: 15px;
+	}
+
+	footer .insta:link{
+		text-decoration: none;
+		color: black;
+	}
+
+	footer .insta:visited{
+		text-decoration: none;
+		color: black;
+	}
+
+	footer .insta:hover{
+		text-decoration: none;
+		color: grey;
+	}
+/*--azonos_footer_end--*/
+
+/*--kezdolap--*/
+	.kep_kezdolap{
+		max-width: 25%;
+		float: left;
+		padding-right: 30px;
+		padding-bottom: 30px;
+		vertical-align: middle;
+	}
+
+	.nev{
+		font-size: 31px;
+		font-weight: 700;
+		font-style: italic;
+	}
+
+/*--kezdolap_end--*/
+
+/*--referenciak--*/
+
+	.referenciak{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	}
+
+	.doboz1{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		
+		text-align: center;
+		font-size: 18px;
+		vertical-align: middle;
+		font-weight: 600;
+		}
+	
+	.doboz1_kicsi {
+		background-color: #bae8ff;
+		margin: 15px;
+		padding: 15px;
+	}
+
+	.doboz1_kicsi a:link{
+		font-size: 21px;
+		text-decoration: none;
+		color: black;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 15px;
+	}
+
+	.doboz1_kicsi a:visited{
+		font-size: 21px;
+		text-decoration: none;
+		color: black;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 15px;
+	}
+
+	.doboz1_kicsi a:hover{
+		background-color: #66ccff;
+		color: white;
+		
+		animation-name: menupont2;
+		animation-duration: 1s;
+	}
+
+	@keyframes menupont2{
+		from{background-color: white; color: #66ccff;}
+		to{background-color: #66ccff; color: white;}
+	}
+
+	.kep_referenciak{
+		max-width: 70%;
+		vertical-align: middle;
+		display: block;
+		margin-left: auto;
+  		margin-right: auto;
+  		padding-bottom: 15px;
+  		padding-top: 15px;
+	}
+
+	.vissza_gomb a:link{
+		font-size: 21px;
+		text-decoration: none;
+		color: black;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 15px;
+	}
+
+	.vissza_gomb a:visited{
+		font-size: 21px;
+		text-decoration: none;
+		color: black;
+		font-weight: 700;
+		padding: 10px 30px;
+		border-radius: 15px;
+	}
+
+	.vissza_gomb a:hover{
+		background-color: #66ccff;
+		color: white;
+		
+		animation-name: menupont3;
+		animation-duration: 1s;
+	}
+
+	@keyframes menupont3{
+		from{background-color: white; color: #66ccff;}
+		to{background-color: #66ccff; color: white;}
+	}
+/*--referenciak_end--*/
+
+/*--kepek--*/
+	.kepek{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+	}
+
+	.kepek div {
+		padding-bottom: 10px;
+	}
+
+	.kepek_2 div {
+		padding: 15px;
+	}
+
+	.kep{
+		max-width: 90%;
+		vertical-align: middle;
+		display: block;
+		margin-left: auto;
+  		margin-right: auto;
+	}
+
+	.kep:hover {
+		box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+	}
+/*--kepek_end--*/
+
+/*--dokumentacio--*/
+	.dokumentacio_kep{
+		max-width: 70%;
+		vertical-align: middle;
+		display: block;
+		margin-left: auto;
+  		margin-right: auto;
+  		margin-bottom: 15px;
+  		margin-top: 15px;
+	}
+
+	.dokumentacio{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		
+	}
+
+	.doboz_2{
+		background-color: #bae8ff;
+		margin: 15px;
+	}
+
+	
+/*--dokumentacio_end--*/
